@@ -30,8 +30,12 @@ export default function LoginPage() {
     }
   }
 
-  const handleGoogleSignIn = () => {
-    router.push("/google-signin")
+  const handleGoogleSignIn = async () => {
+    try {
+      await loginWithGoogle();
+    } catch (error) {
+      console.error("Google sign-in error:", error);
+    }
   }
 
   return (

@@ -4,11 +4,11 @@ import { MySqlDialect } from '@sequelize/mysql';
 const sequelize = new Sequelize({
   dialect: MySqlDialect,
   database: 'BIN',
-  user: 'root',
+  user: 'HUY',
   password: 'null',
   host: 'localhost',
   logging: false,
-  port: 8080,
+  port: 3306,
 });
 let connectDB = async() => {
     try {

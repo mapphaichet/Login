@@ -258,7 +258,16 @@ export default function Header() {
           unreadCount={unreadCount}
           onMarkAllAsRead={handleMarkAllAsRead}
         />
-        <button onClick={logout} className="ml-4 px-3 py-1 text-sm text-gray-700 hover:text-gray-900">
+        <button 
+          onClick={async () => {
+            try {
+              await logout();
+            } catch (error) {
+              console.error('Logout failed:', error);
+            }
+          }} 
+          className="ml-4 px-3 py-1 text-sm text-gray-700 hover:text-gray-900"
+        >
           Logout
         </button>
 
