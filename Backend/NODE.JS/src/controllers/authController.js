@@ -6,7 +6,7 @@ const handleGoogleCallback = (req, res) => {
             return res.redirect('http://localhost:3000/login?error=auth_failed');
         }
         // After successful authentication, redirect to frontend dashboard
-        res.redirect('http://localhost:3000/dashboard');
+        res.redirect('http://localhost:3000');
     } catch (error) {
         console.error('Google callback error:', error);
         res.redirect('http://localhost:3000/login?error=server_error');
